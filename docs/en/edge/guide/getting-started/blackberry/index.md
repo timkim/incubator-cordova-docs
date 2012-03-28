@@ -13,29 +13,28 @@ Video Tutorials
 
 - Windows XP (32-bit) or Windows 7 (32-bit and 64-bit) or Mac OSX 10.6.4+
 - Java Development Kit (JDK)
-    - Windows: [Oracle JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html#jdk) (32-Bit Version)
-    - Mac OS X: Versions prior to Mac OS X 10.7 provided Java by default.  OS X 10.7+ requires installation of [Java](http://support.apple.com/kb/DL1421).
+	- Windows: [Oracle JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html#jdk) (32-Bit Version)
+	- Mac OS X: Versions prior to Mac OS X 10.7 provided Java by default.  OS X 10.7+ requires installation of [Java](http://support.apple.com/kb/DL1421).
 - Apache Ant
-    - Windows: [Apache Ant](http://ant.apache.org/bindownload.cgi).
-    - Mac OS X: Apache Ant is bundled with Java install.
-- BlackBerry Desktop Software
-	- http://us.blackberry.com/apps-software/desktop/
-- Adobe Air: Required to be used when installing the sdks
-	- http://get.adobe.com/air/
+	- Windows: [Apache Ant](http://ant.apache.org/bindownload.cgi).
+	- Mac OS X: Apache Ant is bundled with Java install.
+- [BlackBerry Desktop Software](http://us.blackberry.com/apps-software/desktop/)
+- [Adobe Air](http://get.adobe.com/air/): Required to be used when installing the sdks
+	
 2. Install SDK + Cordova
 -------------------------
 
 - Download and install one or more of the WebWorks SDKs. Keep note of the install directory.
-    - [BlackBerry WebWorks Smartphone SDK](https://bdsc.webapps.blackberry.com/html5/download/sdk) for smartphone development
-    - [BlackBerry WebWorks Tablet OS SDK](https://bdsc.webapps.blackberry.com/html5/download/sdk) for Playbook development.
+	- [BlackBerry WebWorks Smartphone SDK](https://bdsc.webapps.blackberry.com/html5/download/sdk) for smartphone development
+	- [BlackBerry WebWorks Tablet OS SDK](https://bdsc.webapps.blackberry.com/html5/download/sdk) for Playbook development.
 - Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents.
 
 3. Setup New Project
 --------------------
 
 - Open up a command prompt/terminal and navigate to where you extracted Cordova.
-- There is a directory for each platform that Cordova supports.  CD into the blackberry directory.
-- The blackberry directory contains two directories, `sample` and `www`.  The `sample` folder contains a complete Cordova project.  Copy the `sample` folder to another location on your computer.
+- There is a directory for each platform that Cordova supports.	 CD into the blackberry directory.
+- The blackberry directory contains two directories, `sample` and `www`.  The `sample` folder contains a complete Cordova project.	Copy the `sample` folder to another location on your computer.
 - Change to the newly created directory.
 - Open up the project.properties file with your favorite editor and change the lines `blackberry.bbwp.dir=` and/or `playbook.bbwp.dir=` to equal the directory that contains the bbwp file within the respective install locations of the SDKs you downloaded earlier.
 
@@ -50,12 +49,12 @@ Build the Cordova sample project by typing `ant target build` in your command pr
 BlackBerry smartphone simulators are only available on Windows. PlayBook simulators require VMWare Player (Windows) or VMWare Fusion (Mac OS X). The WebWorks SDK provides a default simulator. Additional simulators are [available](http://us.blackberry.com/developers/resources/simulators.jsp).
 
 - Open the project.properties file with your favorite editor and customize the following properties.
-    - Smartphone (Optional)
-        - `blackberry.sim.dir` : Path to directory containing simulator. On windows file separator '\' must be escaped '\\\'.
-        - `blackberry.sim.bin` : Name of the simulator executable in the specified directory.
-    - Playbook
-        - `playbook.sim.ip` : IP address of simulator obtained when placing the simulator in developer mode through simulator security settings.
-        - `playbook.sim.password` : Simulator password which can be set through simulator security settings.
+	- Smartphone (Optional)
+		- `blackberry.sim.dir` : Path to directory containing simulator. On windows file separator '\' must be escaped '\\\'.
+		- `blackberry.sim.bin` : Name of the simulator executable in the specified directory.
+	- Playbook
+		- `playbook.sim.ip` : IP address of simulator obtained when placing the simulator in developer mode through simulator security settings.
+		- `playbook.sim.password` : Simulator password which can be set through simulator security settings.
 - While in your project directory, in command prompt/terminal type `ant target load-simulator`. Replace `target` with either `blackberry` or `playbook`.  Note, for PlayBook the simulator virtual image must already be started.
 - The application will be installed in the All Applications section in the simulator.  Note, on BlackBerry OS 5 the application is installed in the Downloads folder.
 
@@ -67,15 +66,15 @@ BlackBerry smartphone simulators are only available on Windows. PlayBook simulat
 		- [How to set up for tablet signing](https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_tablet_apps_1920009_11.html)
 		- [How to set up for smartphone signing](https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_smartphone_apps_1920010_11.html)
 - Open the project.properties file with your favorite editor and customize the following properties:
-    - Smartphone (Optional)
-        - `blackberry.sigtool.password` : Password used when code signing keys were registered when you set up for the smartphone.  If not specified, a prompt will occur.
-    - Playbook (Required - if one of these items is missing the deployment to your tablet will fail)
-        - `playbook.sigtool.csk.password` : One of the passwords used when code signing keys were registered when you set up for the tablet.
-        - `playbook.sigtool.p12.password` : The other password used when code signing keys were registered when you set up for the tablet. 
-        - `playbook.device.ip` : IP address of device obtained when placing the device in developer mode through device security settings.
-        - `playbook.device.password` : Device password which is set through device security settings.
+	- Smartphone (Optional)
+		- `blackberry.sigtool.password` : Password used when code signing keys were registered when you set up for the smartphone.	If not specified, a prompt will occur.
+	- Playbook (Required - if one of these items is missing the deployment to your tablet will fail)
+		- `playbook.sigtool.csk.password` : One of the passwords used when code signing keys were registered when you set up for the tablet.
+		- `playbook.sigtool.p12.password` : The other password used when code signing keys were registered when you set up for the tablet. 
+		- `playbook.device.ip` : IP address of device obtained when placing the device in developer mode through device security settings.
+		- `playbook.device.password` : Device password which is set through device security settings.
 - While in your project directory, in command prompt/terminal type `ant target load-device`. Replace `target` with either `blackberry` or `playbook`.
-- The application will be installed in the All Applications section in the device.  Note, on BlackBerry OS 5 the application is installed in the Downloads folder.
+- The application will be installed in the All Applications section in the device.	Note, on BlackBerry OS 5 the application is installed in the Downloads folder.
 
 
 Done!

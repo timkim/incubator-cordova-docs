@@ -18,7 +18,9 @@ Video Tutorials:
 - Apache Ant
     - Windows: [Apache Ant](http://ant.apache.org/bindownload.cgi).
     - Mac OS X: Apache Ant is bundled with Java install.
-
+- BlackBerry Desktop Software
+	- http://us.blackberry.com/apps-software/desktop/
+	
 2. Install SDK + Cordova
 -------------------------
 

@@ -81,3 +81,8 @@ Done!
 -----
 
 You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/31930982/Getting-Started-with-PhoneGap-BlackBerry-WebWorks).
+
+Quirks
+------
+- All file names are case sensitive on BlackBerry. So make sure any files you have referenced have the correct case sensitive path!
+- Special characters in file names typically break during the build process. Try to avoid spaces as well - spaces work in the above process, but will break if you attempt to export the project to Eclipse. 

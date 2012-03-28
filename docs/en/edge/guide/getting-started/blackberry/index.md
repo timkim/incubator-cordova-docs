@@ -61,8 +61,10 @@ BlackBerry smartphone simulators are only available on Windows. PlayBook simulat
 5B. Deploy to Device (Windows and Mac)
 --------------------------------------
 
-Deploying to a device requires signing keys which can be obtained from RIM by filling out this [form](https://www.blackberry.com/SignedKeys/).
-
+-Deploying to a device requires signing keys which can be obtained from RIM by filling out this [form](https://www.blackberry.com/SignedKeys/). 
+	-Once you have your signing keys you will have to set them using the bbwp tool that is located within the sdk directory.
+		- [How to set up for tablet signing](https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_tablet_apps_1920009_11.html)
+		- [How to set up for smartphone signing](https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_smartphone_apps_1920010_11.html)
 - Open the project.properties file with your favorite editor and customize the following properties:
     - Smartphone (Optional)
         - `blackberry.sigtool.password` : Password used when code signing keys were registered.  If not specified, a prompt will occur.

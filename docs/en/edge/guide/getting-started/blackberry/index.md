@@ -36,7 +36,7 @@ Video Tutorials:
 - There is a directory for each platform that Cordova supports.  CD into the blackberry directory.
 - The blackberry directory contains two directories, `sample` and `www`.  The `sample` folder contains a complete Cordova project.  Copy the `sample` folder to another location on your computer.
 - Change to the newly created directory.
-- Open up the project.properties file with your favorite editor and change the lines `blackberry.bbwp.dir=` and/or `playbook.bbwp.dir=` to equal the respective install locations of the SDKs you downloaded earlier.
+- Open up the project.properties file with your favorite editor and change the lines `blackberry.bbwp.dir=` and/or `playbook.bbwp.dir=` to equal the directory that contains the bbwp file within the respective install locations of the SDKs you downloaded earlier.
 
 4. Hello World
 --------------

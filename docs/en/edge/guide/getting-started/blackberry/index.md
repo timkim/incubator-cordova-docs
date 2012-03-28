@@ -61,16 +61,16 @@ BlackBerry smartphone simulators are only available on Windows. PlayBook simulat
 5B. Deploy to Device (Windows and Mac)
 --------------------------------------
 
--Deploying to a device requires signing keys which can be obtained from RIM by filling out this [form](https://www.blackberry.com/SignedKeys/). 
+-Deploying to a device requires signing keys which can be obtained from RIM by filling out this [form](https://www.blackberry.com/SignedKeys/). When you register for signing keys, you'll be asked to give a PIN - remember this field! You will need it to set up for signing your applications.
 	-Once you have your signing keys you will have to set them using the bbwp tool that is located within the sdk directory.
 		- [How to set up for tablet signing](https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_tablet_apps_1920009_11.html)
 		- [How to set up for smartphone signing](https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_smartphone_apps_1920010_11.html)
 - Open the project.properties file with your favorite editor and customize the following properties:
     - Smartphone (Optional)
-        - `blackberry.sigtool.password` : Password used when code signing keys were registered.  If not specified, a prompt will occur.
-    - Playbook
-        - `playbook.sigtool.csk.password`
-        - `playbook.sigtool.p12.password`
+        - `blackberry.sigtool.password` : Password used when code signing keys were registered when you set up for the smartphone.  If not specified, a prompt will occur.
+    - Playbook (Required - if one of these items is missing the deployment to your tablet will fail)
+        - `playbook.sigtool.csk.password` : One of the passwords used when code signing keys were registered when you set up for the tablet.
+        - `playbook.sigtool.p12.password` : The other password used when code signing keys were registered when you set up for the tablet. 
         - `playbook.device.ip` : IP address of device obtained when placing the device in developer mode through device security settings.
         - `playbook.device.password` : Device password which is set through device security settings.
 - While in your project directory, in command prompt/terminal type `ant target load-device`. Replace `target` with either `blackberry` or `playbook`.

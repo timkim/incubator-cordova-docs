@@ -3,7 +3,7 @@ Getting Started with Blackberry
 
 Cordova for BlackBerry makes use of the [BlackBerry WebWorks framework](https://bdsc.webapps.blackberry.com/html5). BlackBerry WebWorks tooling is available for Windows or Mac environments. WebWorks applications can ONLY be deployed to BlackBerry devices running OS 5.0 and higher or the BlackBerry Playbook operating system.
 
-Video Tutorials:
+Video Tutorials
 ----------------
 
 - [PhoneGap and BlackBerry Widgets quick Start Video](http://www.youtube.com/v/eF0h0K0OLwI?autoplay=1)
@@ -21,7 +21,7 @@ Video Tutorials:
 - BlackBerry Desktop Software
 	- http://us.blackberry.com/apps-software/desktop/
 - Adobe Air: Required to be used when installing the sdks
-	- http://get.adobe.com/air/?promoid=JOPDE
+	- http://get.adobe.com/air/
 2. Install SDK + Cordova
 -------------------------
 

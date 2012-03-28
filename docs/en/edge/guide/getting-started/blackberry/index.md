@@ -1,12 +1,7 @@
 Getting Started with Blackberry
 ============================
 
-Cordova for BlackBerry makes use of the [BlackBerry WebWorks framework](https://bdsc.webapps.blackberry.com/html5). BlackBerry WebWorks tooling is available for Windows or Mac environments. WebWorks applications can ONLY be deployed to BlackBerry devices running OS 5.0 and higher or the BlackBerry Playbook operating system.
-
-Video Tutorials:
-----------------
-
-- [PhoneGap and BlackBerry Widgets quick Start Video](http://www.youtube.com/v/eF0h0K0OLwI?autoplay=1)
+Cordova for BlackBerry makes use of the [BlackBerry WebWorks framework](https://bdsc.webapps.blackberry.com/html5). BlackBerry WebWorks tooling is available for Windows or Mac environments. WebWorks applications can ONLY be deployed to BlackBerry devices running OS 5.0 and higher or the BlackBerry PlayBook operating system.
 
 1. Requirements
 ---------------
@@ -22,9 +17,10 @@ Video Tutorials:
 2. Install SDK + Cordova
 -------------------------
 
+- PlayBook development requires the [Adobe Air SDK](http://www.adobe.com/devnet/air/air-sdk-download.html)
 - Download and install one or more of the WebWorks SDKs. Keep note of the install directory.
-    - [BlackBerry WebWorks Smartphone SDK](https://bdsc.webapps.blackberry.com/html5/download/sdk) for smartphone development
-    - [BlackBerry WebWorks Tablet OS SDK](https://bdsc.webapps.blackberry.com/html5/download/sdk) for Playbook development.
+    - Smartphone Development: [BlackBerry WebWorks Smartphone SDK](https://bdsc.webapps.blackberry.com/html5/download/sdk)
+    - PlayBook Development: [BlackBerry WebWorks Tablet OS SDK](https://bdsc.webapps.blackberry.com/html5/download/sdk)
 - Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents.
 
 3. Setup New Project
@@ -34,7 +30,7 @@ Video Tutorials:
 - There is a directory for each platform that Cordova supports.  CD into the blackberry directory.
 - The blackberry directory contains two directories, `sample` and `www`.  The `sample` folder contains a complete Cordova project.  Copy the `sample` folder to another location on your computer.
 - Change to the newly created directory.
-- Open up the project.properties file with your favorite editor and change the lines `blackberry.bbwp.dir=` and/or `playbook.bbwp.dir=` to equal the respective install locations of the SDKs you downloaded earlier.
+- Open up the project.properties file with your favorite editor and edit the entries for `blackberry.bbwp.dir=` and/or `playbook.bbwp.dir=`. Set the  value(s) to the directory containing the `bbwp` binary in the WebWorks SDK(s) installed earlier.
 
 4. Hello World
 --------------
@@ -59,12 +55,16 @@ BlackBerry smartphone simulators are only available on Windows. PlayBook simulat
 5B. Deploy to Device (Windows and Mac)
 --------------------------------------
 
-Deploying to a device requires signing keys which can be obtained from RIM by filling out this [form](https://www.blackberry.com/SignedKeys/).
-
+- Deploying to a device requires signing keys which can be obtained from RIM.
+    - Fill out this [form](https://bdsc.webapps.blackberry.com/html5/signingkey). to request signing keys.
+    - Install the signing keys once they have been received:
+        - [Setup Smartphone Signing keys](https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_smartphone_apps_1920010_11.html)
+        - [Setup Tablet Signing keys](https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_tablet_apps_1920009_11.html)
+- Install [BlackBerry Desktop Sofware](http://us.blackberry.com/apps-software/desktop/) to be able to install a signed application to a smartphone device attached via USB.
 - Open the project.properties file with your favorite editor and customize the following properties:
     - Smartphone (Optional)
         - `blackberry.sigtool.password` : Password used when code signing keys were registered.  If not specified, a prompt will occur.
-    - Playbook
+    - Playbook (Required)
         - `playbook.sigtool.csk.password`
         - `playbook.sigtool.p12.password`
         - `playbook.device.ip` : IP address of device obtained when placing the device in developer mode through device security settings.
@@ -72,8 +72,11 @@ Deploying to a device requires signing keys which can be obtained from RIM by fi
 - While in your project directory, in command prompt/terminal type `ant target load-device`. Replace `target` with either `blackberry` or `playbook`.
 - The application will be installed in the All Applications section in the device.  Note, on BlackBerry OS 5 the application is installed in the Downloads folder.
 
+Additional Information
+----------------------
 
-Done!
------
+The following articles provide help to issues you may encounter when developing a Cordova application which is based on the BlackBerry WebWorks framework.
 
-You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/31930982/Getting-Started-with-PhoneGap-BlackBerry-WebWorks).
+- [BlackBerry WebWorks Development Pitfalls](http://supportforums.blackberry.com/t5/Web-and-WebWorks-Development/Common-BlackBerry-WebWorks-development-pitfalls-that-can-be/ta-p/624712)
+- [Best practices for packaging WebWorks applications](https://bdsc.webapps.blackberry.com/html5/documentation/ww_developing/bestpractice_compiling_ww_apps_1873324_11.html)
+

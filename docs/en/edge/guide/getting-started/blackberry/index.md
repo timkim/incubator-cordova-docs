@@ -20,7 +20,8 @@ Video Tutorials:
     - Mac OS X: Apache Ant is bundled with Java install.
 - BlackBerry Desktop Software
 	- http://us.blackberry.com/apps-software/desktop/
-	
+- Adobe Air: Required to be used when installing the sdks
+	- http://get.adobe.com/air/?promoid=JOPDE
 2. Install SDK + Cordova
 -------------------------
 

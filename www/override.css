@@ -1,0 +1,18 @@
+pre {
+/*    border:1px solid #CCCCCC;*/
+    background:#F2F0EE;
+    -webkit-border-radius:11px;
+    -moz-border-radius:11px;
+    border-radius:11px;
+    display:block;
+    line-height:110%;
+    margin:1.5em 0px 3em 0px;
+    padding:15px 20px;
+    white-space:pre-wrap;
+}
+pre code {
+  background:none;
+	border:none;
+	font-size:11px;
+	padding:0px;
+}

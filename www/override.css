@@ -20,3 +20,29 @@ pre code {
 ul{
     margin-left: 40px;
 }
+
+#subheader{
+    position: fixed;
+    top: 91px;
+    left: 0;
+    right: 0;
+    z-index:9;
+    height: 57px;
+}
+
+#subheader.grid {
+    padding: 4px 0;
+}
+.header-placeholder{
+    height: 155px;
+}
+
+.grid .wrap h1{
+    background: white;
+    display: inline;
+    padding: 4px 8px;
+}
+
+#scrollable{
+    z-index: 0;
+}

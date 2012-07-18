@@ -46,3 +46,20 @@ ul{
 #scrollable{
     z-index: 0;
 }
+
+#apiFunctionNav h1{
+    position: absolute;
+    left: 36px;
+    height: 36px;
+    padding: 0 8px 0 8px;
+}
+
+#apiFunctionNav span{
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background: url(images/sprite.png) no-repeat;
+    background-position: -156px -95px;
+    background-color: #4CC2E4;
+}
+
